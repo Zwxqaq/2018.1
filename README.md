@@ -1,7 +1,6 @@
 # Instruction
 ## Just one repository for JavaSE and Python（见另外一个储存室）
-[我的博客](http://blog.csdn.net/guodongxiaren)  
-    ##Period1
+   [Period1]
         ### 1.windos常用快捷键，命令行     
         ### 2.java配置问题
 ### 3.注释和API
