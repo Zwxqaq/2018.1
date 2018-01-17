@@ -1,8 +1,7 @@
 # Instruction
 ### Just one repository for JavaSE and Python（见另外一个储存室）
 ```public static void main(String[] args){}```
-```
-## Period1
+```## Period1```
 ### 1.windos常用快捷键，命令行     
 ### 2.java配置问题
 ### 3.注释和API
@@ -13,9 +12,7 @@
 ### 8.选择和循环结构
 ### 9.基础项目作业思考（后期补上相应题型）
 ### 10.面试题汇总
-```
-```
-## Period2
+```## Period2```
 ### 1.方法和重载
 ### 2.数组及Arrays类
 ### 3.面向对象思考总结
