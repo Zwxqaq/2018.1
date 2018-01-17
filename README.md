@@ -1,2 +1,4 @@
 # hello-world1
-just one repository for javase
+Just one repository for javase
+I really realize software it's a sweet gift for me to hold on and stick to.
+Let's enough.
