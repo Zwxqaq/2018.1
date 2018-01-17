@@ -1,2 +1,2 @@
 # hello-world1
-just one repository for javase
+Just one repository for JavaSE and Pthon
