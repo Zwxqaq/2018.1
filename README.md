@@ -1,2 +1,2 @@
-# hello-world1
+# Instruction
 Just one repository for JavaSE and Pthon
