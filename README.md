@@ -35,9 +35,8 @@
 ### 15.续集合，Map（HashMap，TreeMap，HashTable，Properties）及相关遍历（Iterator）
 ### 16.BubbleSort与集合排序（Comparable，Comparator)
 ### 17.File类和IO流
-### 18.Eclipse常用快捷键
-### 19.相关作业的归类和思考（后期补上相应题型）
-### 20.面试题汇总
+### 18.相关作业的归类和思考（后期补上相应题型）
+### 19.面试题汇总
 ```
 ## Period3
 ### 等待更新
