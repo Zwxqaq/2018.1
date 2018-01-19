@@ -1,0 +1,27 @@
+建文件  # mkdir \a\b\c\d  #echo 内容>文件名
+建文件夹 #mkdir d1  
+使用dir查看目录盘符下的内容（本人经常使用）
+进入盘符或目录  #cd C:/  #D:
+复制移动删除 #rmdir （remove）              #DEL 文件名 
+            #xcopy 文件名 需要被复制的路径  #move  文件名 需要被转移的路径
+退出 #exit
+清屏 #cls
+相对路径 #相对当前盘符的路径 C:/Music/jay.mp4  jay.mp4相对C：/Music 父路径而言 为相对路径
+绝对路径 #从根目录开始的路径  
+cd命令使用 在盘符下 #cd 文件名 即转到当前文件名下  可通过dir查询内部信息
+             #cd d:/d1/d2  多级目录跳转
+             #返回上一级 cd..  /   cd../
+             #返回上上级 cd../../
+             #进入当前目录 cd
+遇到不会命令  使用help帮助：
+             有关某个命令的详细信息，请键入HELP命令名，此处不列举。
+打开屏幕键盘 #osk
+打开画图工具 #mspaint
+放大镜工具   #magnify
+隐藏文件     #attrib +s +a +h +r D:\zwx.txt（文件名）
+显示文件     #attrib -s -a -h -r D:\zwx.txt（文件名）
+重启         #shutdown -r
+关机         #shundown -s（xx）多久关机
+             #shundown -a
+             
+
