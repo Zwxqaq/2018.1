@@ -1,0 +1,15 @@
+###Eclipse 主流java工具包
+###MyEclipse 在Eclipse上增加许多插件，功能强大，收费
+###SVN插件，用于团队协作开发的软件
+###软件快捷键：
+      #alt+/ 构造方法 以及syso,main,new等的快捷输入
+      #alt+shift+s  +o 有参构造的快捷方式
+      #alt+shift+s  +r getter/setter方法
+      #ctrl+d  删除该行内容
+      #ctrl+s  保存程序
+      #ctrl+shift+o  快速导包
+      #ctrl+shift+f  格式化代码
+      #ctrl+e   快速切换编辑器
+      #ctrl+pageup/pagedown  快速左右切换
+      #alt+↑ 交换上下行
+      
