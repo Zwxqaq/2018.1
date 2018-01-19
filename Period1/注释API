@@ -1,0 +1,9 @@
+###注释：
+      #单行注释//
+      #多行注释/*  */
+      #文档注释/**   */ 在使用doc命令可以在API中生成自己的帮助文档
+###API：
+      #Application Process Interface
+      #应用程序接口文档，所以类和方法和功能在API中都有呈现
+      #英文阅读能力重要的体现
+      #class  field  constructor method ...不做过多解释
