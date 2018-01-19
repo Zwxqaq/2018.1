@@ -1,0 +1,35 @@
+###版本介绍：
+    #JSE 标准库
+    #JEE 企业级
+    #JME 嵌入式
+###运行机制：
+    #JVM  使得跨平台使用成为可能
+          #JAVA编译器，编译成机器码（.class)
+          #再交给JVM解释执行（编译错误，为语法错误），Error为硬件错误
+    #垃圾回收器 Garage Collection
+          #一个对象如果没有被引用，成为垃圾
+          #System.gc（） 通知gc来清理垃圾，至于清不清理gc说了算，你说了不算
+          #--->面试题：
+                  #c++程序员内存回收和java回收器哪个效率高？
+                        #答：多人协作项目中，当第一个人较为优秀回收效率为90%，第二个人回收效率一般为80%，相互协作后
+                        导致效率远远降低，因此我认为java回收器的效率较高。但，java长时间使用，则容易卡死，占用过多内存
+          #java管理gc：
+                  #年轻代：Eden 清理生命周期短的
+                  #年老代：Survivor Eden经历15次垃圾回收，进入Survivor
+                  #持久代：静态文件，java类代码
+###环境安装和配置
+    #两个概念
+          #jre：java runtime evironment 运行环境
+          #jdk：java development kit 开发工具包
+    #配置：（高级设置）
+          #JAVA_HOME：jdk目录
+          #PATH：jdk目录\bin
+          #CLASSPATH:.;jdk目录\jre\lib\rt.jar
+    #检查配置结果：
+          #java 解释执行
+          #javac 编译
+          #java -version  例如我的版本：
+                #C:\>java -version
+                java version "1.7.0_80"
+                Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
+                Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
