@@ -6,6 +6,7 @@
         #float  4字节 有效位精确到7位   F
         #double 8字节 有效位精确到15位  D
         #char   2字节 'a'/97/转义字符/\u0000(四种表示形式）
+                而且char只有正数 从0-65535
         #boolean 1位  true/false
 ###引用类型：
         #类（String类，Arrays类，Date类，File类,abstract类等）
