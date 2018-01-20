@@ -1,0 +1,49 @@
+###数组：
+  #什么是数组？我的理解，开辟一段连续内存空间，数组的大小固定，查找方便，增删麻烦；数组可以存储任何类型的数据
+  但是存储的内部都是同一数据类型；
+  #定义：用于存储相同类型的一组数据
+        按照一定先后次序排列的组合
+  #元素（element）：即数组中的每一个数据
+  #特点：#元素相同类型，不允许出现混合类型
+        #元素个数确定，数组一旦创建，大小不可改变
+        #数据类型可以是任意类型
+  #定义：
+        #int[] arr=new int [length];
+        #int arr []=new int [length];
+        #int[] arr;
+		    arr=new int[] {1,2,3};
+  #注意点
+  #参数传值机制
+        #如果是基本数据类型，将实参传递给形参的时候，相当于拷贝，传递了值的副本，副本是不会影响原件的
+        #而数组传递的时候，传递的不是基本数据类型，引用类型，传递的是地址，副本和实参指向同一个地址，改变
+        副本指向的地址的值，原件也会随着更改
+  #冒泡排序
+        #for（int i=0;i<arr.length-1;i++){
+        for(int j=0;j<arr.length-1-i;j++){
+                XXXXXXXXX
+        }}
+###二位数组
+  #定义：就是x，y轴一样嘛
+      #int[][] arr={{……}，{……},……{……}};
+      #int[][] arr=new int[3][4];//直接定义三行四列的矩阵
+      #int[][] arr=new int[3][];//行数必须确定
+  #遍历：
+      #for(int i=0;i<arr.length;i++){
+      for(int j=0;j<arr[i].length;j++){
+      System.out.print(arr[i][j]+"\t");}}
+###Arrays类（六级阅读满分看API轻轻松松，老师说平常自己多看英文API，有利于工作中学习最新的技术）
+  #binarySearch(double[] a, double key) 
+  Searches the specified array of doubles for the specified value using the binary search algorithm.
+  为了找到数组中确切值，使用二分查找法寻找double类型的指定数组
+  #二分查找法：先排序；再判断向前找，还是向后找；
+  #copyOf(byte[] original, int newLength) 
+  Copies the specified array, truncating or padding with zeros (if necessary) 
+  so the copy has the specified length.
+  复制指定数组，截断或用0填充（如果需要），以便复制指定的长度
+  #sort(byte[] a) 
+  Sorts the specified array into ascending numerical order.
+  按照字母表顺序，排序指定数组
+  #toString(boolean[] a) 
+  Returns a string representation of the contents of the specified array.
+  返回一个字符串，来代表指定数组中的数据
+  
