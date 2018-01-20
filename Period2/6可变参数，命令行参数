@@ -1,0 +1,14 @@
+###命令行参数：
+    #(String[] args)
+    #还记得main方法中的形参吗？args为字符串数组名
+    #我们右键编辑器，在运行配置run configuration中找到编译参数program Arguments来调控
+    #代码后续上传
+###可变参数：
+    #适用于参数个数不确定，类型不确定的情况下使用，java中把可变参数当做数组处理
+    #可变参数必须位于形参的最后一位，而且一个方法中只能有一个可变参数
+    #变量类型...变量名
+    #public static void test（String str，int...arr){
+    for(int Arr:arr){//for-each遍历
+      System.out.print(Arr);
+    }
+    }
