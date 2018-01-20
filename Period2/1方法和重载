@@ -6,4 +6,37 @@
   #取名有意义，不乱取名
 ###常用问题：
   #形式参数：方法声明前用来接收外界传入的数据
-  #
+  #返回值：方法在执行完毕后返回给调用者的数据
+  #返回值类型：约定好的返回值，如果没有返回值，固定为void
+  #实际参数：在方法调用前，实际传给方法的数据
+  #方法遵循原则：一个方法只能完成一个功能
+  #不要让形参和方法体内的变量名相同
+  public void test(String[] arr){
+		String[] arr;//报错
+	}
+###return作用：
+  #1.返回一个值给调用者，我记得函数中有时候返回值是便于之后的程序来判断是否继续执行
+  #2.结束方法使用
+###方法的overload（重载）：
+  #必须在同类和有继承关系的类中
+  #方法名必须完全一致
+  #方法所带参数（参数个数，参数类型，参数顺序）必须要有其一不同
+	public void test(String[] arr,String arr1){//初始方法
+		String[] arr11;
+	}
+	public int test(String[] arr,int arr1){//参数类型不同
+		return 0;
+	}
+	public double test(String[] arr,String arr1,String[] arr2){//参数个数不同
+		return 0.0;
+	}
+	public String test(String arr1,String[] arr){//参数顺序不同
+		return "abc";
+	}
+###标签用法：
+  #作用：终止外层循环的方法
+  #标签名：XXXXXXXXX
+          XXXXXXX
+          break 标签名；
+          continue 标签名；
+
