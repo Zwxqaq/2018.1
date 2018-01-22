@@ -34,9 +34,10 @@
 ### 15.集合，Collection，List（ArrayList，LinkedList，Vector），Set（HashSet，TreeSet）
 ### 15.续集合，Map（HashMap，TreeMap，HashTable，Properties）及相关遍历（Iterator）
 ### 16.BubbleSort与集合排序（Comparable，Comparator)
-### 17.File类和IO流(字节流)
-### 18.相关作业的归类和思考（后期补上相应题型）
-### 19.面试题汇总
+### 17.File类和IO流(字节流，字符流，缓冲流，转换流，数据流，对象流)
+### 18.system类的使用
+### 19.相关作业的归类和思考（后期补上相应题型）
+### 20.面试题汇总
 ```
 ## Period3
 ### 等待更新
