@@ -1,0 +1,136 @@
+###String 不可变长字符序列
+    #面试题：private final char value[]; 为何说是不可变长序列
+        #因为final导致数组的地址的指向不能发生改变，private不提供getter和setter方法，导致数组中的数据不能发生改变，且实现了序列化接口
+    #public final class String 最终类 不能被继承 
+      extends Object  继承类
+      implements Serializable, Comparable<String>, CharSequence 实现的接口
+    # String str = "abc";   "abc"就是在方法区常量池里增加一个"abc"对象，stack中的str局部变量指向"abc"地址
+       is equivalent to: 
+     char data[] = {'a', 'b', 'c'};字符型数组
+     String str = new String(data);字符串的创建
+    #String()构造方法见下 
+String(byte[] bytes) 
+Constructs a new String by decoding the specified array of bytes using the platform's default charset. 
+#构造一个使用平台默认字符集的字节数组，并将其解码为字符串
+String(byte[] bytes, Charset charset) 
+Constructs a new String by decoding the specified array of bytes using the specified charset. 
+#构造一个使用指定字符集的字节数组，并将其按照字符集解码成字符串
+String(byte[] bytes, int offset, int length) 
+Constructs a new String by decoding the specified subarray of bytes using the platform's default charset. 
+#使用默认字符集解码指定字节数组，构建字符串  开始位置，长度
+String(String original) 
+Initializes a newly created String object so that it represents the same sequence of characters as the argument; in other words, the newly created string is a copy of the argument string. 
+#初始化一个新的字符串对象  就是对字符串original的复制呗
+    #Method Summary方法的总结
+char charAt(int index) 
+Returns the char value at the specified index. 
+#返回所给定下标的字符中的值
+int compareTo(String anotherString) 
+Compares two strings lexicographically. 
+#按照字母表顺序比较两个字符串
+int compareToIgnoreCase(String str) 
+Compares two strings lexicographically, ignoring case differences. 
+#按照字母表顺序比较两个字符串，并且忽略大小写的不同
+String concat(String str) 
+Concatenates the specified string to the end of this string. 
+#拼接两个字符串，后一个黏贴在前一个字符串的尾部
+boolean contains(CharSequence s) 
+Returns true if and only if this string contains the specified sequence of char values. 
+#字符串a是否包含s的内容，如果包含返回true
+static String copyValueOf(char[] data) 
+Returns a String that represents the character sequence in the array specified. 
+#返回一个字符串，代表指定数组的字符顺序
+static String copyValueOf(char[] data, int offset, int count) 
+Returns a String that represents the character sequence in the array specified. 
+#返回一个字符串，代表指定长度的数组的字符顺序
+boolean endsWith(String suffix) 
+Tests if this string ends with the specified suffix. 
+#测试字符串是否以某个后缀结尾
+boolean equals(Object anObject) 
+Compares this string to the specified object.
+#比较字符串和指定的对象，重写了Object方法
+boolean equalsIgnoreCase(String anotherString) 
+Compares this String to another String, ignoring case considerations.
+#比较两个字符串，忽略大小写
+byte[] getBytes() 
+Encodes this String into a sequence of bytes using the platform's default charset, storing the result into a new byte array. 
+#编码字符串到一个字节数组中，使用平台默认编码集，存储结果为一个新的字节数组
+int hashCode() 
+Returns a hash code for this string. 
+#返回一个字符串的hashcode，重写了Object类的方法
+int indexOf(int ch) 
+Returns the index within this string of the first occurrence of the specified character. 
+#返回一个第一次出现这个指定字符在字符串的下标
+int indexOf(String str) 
+Returns the index within this string of the first occurrence of the specified substring. 
+#返回一个第一次出现这个子字符串在字符串的下标
+boolean isEmpty() 
+Returns true if, and only if, length() is 0. 
+#只有字符串长度为0的时候，返回true
+int lastIndexOf(int ch) 
+Returns the index within this string of the last occurrence of the specified character. 
+#返回指定字符最后一次出现的下标
+int lastIndexOf(String str) 
+Returns the index within this string of the last occurrence of the specified substring. 
+#返回指定子字符串最后一次出现的下标
+int length() 
+Returns the length of this string. 
+#返回字符串的长度
+String replace(char oldChar, char newChar) 
+Returns a new string resulting from replacing all occurrences of oldChar in this string with newChar. 
+#用新的字符串替换老的字符串
+String[] split(String regex) 
+Splits this string around matches of the given regular expression. 
+#按照正则表达式分割和匹配字符串
+boolean startsWith(String prefix) 
+Tests if this string starts with the specified prefix. 
+#测试字符串是不是以指定前缀开头
+String substring(int beginIndex, int endIndex) 
+Returns a new string that is a substring of this string. 
+#返回一个新的字符串，按照指定下标开始和结束匹配
+char[] toCharArray() 
+Converts this string to a new character array. 
+#转变字符串为一个新的字符数组
+String toLowerCase() 
+Converts all of the characters in this String to lower case using the rules of the default locale. 
+#将字符串转为小写
+String toString() 
+This object (which is already a string!) is itself returned. 
+#重写Object类的方法，返回对象的地址
+String toUpperCase() 
+Converts all of the characters in this String to upper case using the rules of the default locale. 
+#将字符串转为大写
+String trim() 
+Returns a copy of the string, with leading and trailing whitespace omitted. 
+#去除字符串开头和结尾的空格
+static String valueOf(boolean b) 
+Returns the string representation of the boolean argument. 
+#返回boolean类型的字符串
+
+
+###StringBuffer 可变长字符序列
+    #public final class StringBuffer
+    extends AbstractStringBuilder
+    implements java.io.Serializable, CharSequence
+    #private transient char[] toStringCache;  短暂的 没有被序列化 没有final数组的指向可变 所以可变长
+###StringBuilder     同StringBuffer 几乎一模一样
+    但是StringBuffer  有synchronized 同步 增大了开销 效率低 但是线程安全
+    StringBuilder 线程不安全 但是效率高
+    #方法 
+    #append字符串追加（方法链）
+    StringBuilder sb=new StringBuilder（"abc"）;
+    sb.append("hello").append("world").append("Zwx");//切记方法链的追加 依旧是同一个对象
+    #capacity() 得出字符数组的长度
+    #delete() 字符串删除（方法链） 指定字符串要删除的首尾
+    #insert() 插入字符串（方法链） 指定下标，插入字符串
+    #reverse() 反转
+    #substring() 字符串的截取  指定头和尾，顾首不顾尾
+    
+    
+    
+    
+    
+    
+    
+    
+    
