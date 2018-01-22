@@ -96,7 +96,7 @@ Converts all of the characters in this String to lower case using the rules of t
 #将字符串转为小写
 String toString() 
 This object (which is already a string!) is itself returned. 
-#重写Object类的方法，返回对象的地址
+#返回本对象本身
 String toUpperCase() 
 Converts all of the characters in this String to upper case using the rules of the default locale. 
 #将字符串转为大写
