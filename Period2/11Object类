@@ -33,6 +33,6 @@ Causes the current thread to wait until another thread invokes the notify() meth
 
 ###引出两个比较
       #"==" 基本数据类型，比较值;引用类型，比较地址
-      #"equals" 在Object类中比较的是两个对象的恒等关系，但是像String等类中重写了Object，比较其中的内容
-
+      #"equals" 在Object类中比较的是两个对象的地址，但是像String等类中重写了Object，比较其中的内容
+      #注意StringBuilder和StringBuffed类中继承了Object的方法，但是本身并没有改写，因此如果equals比较的内容，依旧是对象的地址
       
