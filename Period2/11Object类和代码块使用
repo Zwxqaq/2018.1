@@ -1,9 +1,9 @@
 ###Object类
 Method Summary
 Methods  Modifier and Type Method and Description 
-```protected Object clone() 
+protected Object clone() 
 Creates and returns a copy of this object. #克隆
-clone()创建并返回一个对象的复制```
+clone()创建并返回一个对象的复制
 boolean equals(Object obj) 
 Indicates whether some other object is "equal to" this one. #equals方法
 #equals()一个对象和另外一个对象是否相同，我们可以在子类中改写此方法
