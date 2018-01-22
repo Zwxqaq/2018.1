@@ -1,0 +1,38 @@
+###Object类
+Method Summary
+Methods  Modifier and Type Method and Description 
+```protected Object clone() 
+Creates and returns a copy of this object. #克隆
+clone()创建并返回一个对象的复制```
+boolean equals(Object obj) 
+Indicates whether some other object is "equal to" this one. #equals方法
+#equals()一个对象和另外一个对象是否相同，我们可以在子类中改写此方法
+protected void finalize() 
+Called by the garbage collector on an object when garbage collection determines that there are no more references to the object. 
+#finalize()呼叫java垃圾回收器，但是由垃圾回收器决定是否这个对象还在还是不在被引用
+Class<?> getClass() 
+Returns the runtime class of this Object. 
+int hashCode() 
+Returns a hash code value for the object.
+#hashCode()返回对象hashcode的值
+void notify() 
+Wakes up a single thread that is waiting on this object's monitor.
+#唤醒一个等待对象监视的线程
+void notifyAll() 
+Wakes up all threads that are waiting on this object's monitor. 
+#唤醒所有等待对象监视的线程
+String toString() 
+Returns a string representation of the object.
+#toString()返回一个字符串来代表对象，该方法经常被子类重写
+void wait() 
+Causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object. 
+void wait(long timeout) 
+Causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or a specified amount of time has elapsed. 
+void wait(long timeout, int nanos) 
+Causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object, or some other thread interrupts the current thread, or a certain amount of real time has elapsed. 
+
+###引出两个比较
+      #"==" 基本数据类型，比较值;引用类型，比较地址
+      #"equals" 在Object类中比较的是两个对象的恒等关系，但是像String等类中重写了Object，比较其中的内容
+
+      
