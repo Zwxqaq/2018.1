@@ -1,5 +1,5 @@
 1socket通信流程
-  服务器
+  server
     |
   socket()
     |                client
