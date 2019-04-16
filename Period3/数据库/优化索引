@@ -45,7 +45,8 @@ set global slow_query_log = on;
 set 慢搜索时间为1s
 执行一条慢查询语句
 explain 慢查询语句,通过查看type 和  extra字段来分析慢查询语句，进行优化
-type为index或者all，extra为using filesort或者
+type为index或者all，extra为using filesort或者  
+type 为all表示全表扫描
 将慢查询改成走索引的方式就能提高速度
 1加索引 alter table xxx add index xxxx; 通过加索引也可以优化查询
 2更换慢查询为已经存在索引的查询
@@ -57,3 +58,44 @@ select count(xx) from xx force index(primary);
 根据慢日志定位慢sql
 通过explain工具分析sql
 修改sql或者尽量让sql走索引
+
+联合索引
+key `index_area_title`(`area`,`title`)
+通过explain查看其的type
+最左匹配原则：
+  即mysql一直向右匹配知道遇到范围查询，就停止匹配
+  例如a = 3 and b = 4 and c > 5 and d = 6 
+  abc索引匹配后，因为遇到范围查询就停止了接下来的查询
+范围查询 > < between like 
+= in 可以乱序,顺序不影响
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
