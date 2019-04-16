@@ -59,6 +59,7 @@ select count(xx) from xx force index(primary);
 通过explain工具分析sql
 修改sql或者尽量让sql走索引
 
+最左匹配原则：最左匹配原则：最左匹配原则：最左匹配原则：最左匹配原则：
 联合索引
 key `index_area_title`(`area`,`title`)
 通过explain查看其的type
@@ -68,6 +69,14 @@ key `index_area_title`(`area`,`title`)
   abc索引匹配后，因为遇到范围查询就停止了接下来的查询
 范围查询 > < between like 
 = in 可以乱序,顺序不影响
+
+单索引
+key `idxname`(`name`)
+
+索引是建立的越多越好嘛？
+数据量小的表不需要建立索引，建立反而会增加额外索引开销
+数据变更需要维护索引，因此更多的索引意味着更多的维护成本
+更多的索引意味着更多的空间占用
 
 
 
