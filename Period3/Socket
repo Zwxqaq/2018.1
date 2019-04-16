@@ -1,0 +1,14 @@
+1socket通信流程
+  服务器
+    |
+  socket()
+    |                client
+  bind()               |
+    |               socket()
+  listen()             |   
+    |       <-----> connect()
+  accept()             |
+    |       <----->  send()
+  recv()               |
+    |               close()
+  close()
