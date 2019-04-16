@@ -1,0 +1,6 @@
+awk  '{print $1,$4}' xxx.txt
+awk '($1=="tcp" && $2==1) || NR==1 {print $0}' xxx.txt
+awk -F "," '{print $2}' xxx.txt   -F 以什么作为分隔符
+awk '{enginearr[$1]++}END{for(i in enginearr)print i "\t" enginearr[i]}'
+awk 处理格式化数据
+    默认分隔符是空格可以用-F去修改分隔符
