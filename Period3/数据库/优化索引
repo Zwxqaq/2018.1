@@ -40,5 +40,20 @@ Hash索引
 
 如何调优mysql
 show VARIABLES like '%quer%';
-show status like '%slow_queries%';
+show status like '%slow_queries%';  查询慢查询数量
 set global slow_query_log = on;
+set 慢搜索时间为1s
+执行一条慢查询语句
+explain 慢查询语句,通过查看type 和  extra字段来分析慢查询语句，进行优化
+type为index或者all，extra为using filesort或者
+将慢查询改成走索引的方式就能提高速度
+1加索引 alter table xxx add index xxxx; 通过加索引也可以优化查询
+2更换慢查询为已经存在索引的查询
+走主键索引查询未必比其余的索引键查询来的快
+select count(xx) from xx;
+select count(xx) from xx force index(primary);
+通过比较其余键和索引键来查看查询的时间，不一定主键就快！
+
+根据慢日志定位慢sql
+通过explain工具分析sql
+修改sql或者尽量让sql走索引
