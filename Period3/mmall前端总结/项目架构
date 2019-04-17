@@ -1,0 +1,16 @@
+nodejs 
+  js服务端运行环境
+  用于构建webpack环境依赖
+  单线程，异步编程
+
+
+src
+    page + view
+    service                 
+    util
+    image
+dist
+    view
+    js
+    css
+    resource
